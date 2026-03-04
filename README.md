@@ -1,87 +1,170 @@
-# Multilingual Translator with Speech
+# 🌍 Multilingual Translator with Speech
 
-A simple Python-based multilingual translator with speech output using Google Translate and gTTS.
+<p align="center">
 
-## 📝 Features
+![Python](https://img.shields.io/badge/Python-3.x-blue)
+![Google Translate](https://img.shields.io/badge/API-GoogleTranslate-green)
+![gTTS](https://img.shields.io/badge/TextToSpeech-gTTS-orange)
+![Status](https://img.shields.io/badge/Project-Completed-blue)
 
-- Translate text between 100+ languages  
-- Auto-detect source and target languages by name or code  
-- Convert translated text to speech using Google Text-to-Speech (gTTS)  
-- Play audio using Pygame  
-- Command-line based and easy to use  
+</p>
 
-## 🛠️ Technologies Used
+<p align="center">
+A Python-based multilingual translator that converts text between <b>100+ languages</b> and generates speech output using <b>Google Text-to-Speech</b>.
+</p>
 
-- `googletrans` (4.0.0-rc1)  
-- `gTTS`  
-- `pygame`  
-- Python 3  
+---
 
-## 💡 How to Use
+# 🚀 Features
 
-### 1. Clone the repository
+✔ Translate text between **100+ languages**
+✔ Automatically detect **language name or code**
+✔ Convert translated text to **speech output**
+✔ Play translated speech using **Pygame audio engine**
+✔ Simple **command-line interface**
+✔ Lightweight and easy to run
+
+---
+
+# 🧭 System Architecture
+
+```mermaid
+flowchart LR
+A[User Input Text] --> B[Language Detection]
+B --> C[Google Translate API]
+C --> D[Translated Text]
+D --> E[gTTS Text to Speech]
+E --> F[Generate Audio File]
+F --> G[Pygame Audio Player]
+G --> H[Audio Output]
+```
+
+---
+
+# 📊 Translation Workflow
+
+```mermaid
+flowchart TD
+A[Start Program] --> B[User Inputs Source Language]
+B --> C[Enter Text to Translate]
+C --> D[Select Target Language]
+D --> E[Send Request to Google Translate]
+E --> F[Receive Translated Text]
+F --> G[Convert Text to Speech]
+G --> H[Play Audio Output]
+```
+
+---
+
+# 🧠 Module Interaction
+
+```mermaid
+flowchart LR
+A[translator.py] --> B[googletrans]
+B --> C[Translation API]
+
+A --> D[gTTS]
+D --> E[Generate Speech Audio]
+
+A --> F[pygame]
+F --> G[Play Audio Output]
+```
+
+---
+
+# 🛠 Technologies Used
+
+| Technology  | Purpose                   |
+| ----------- | ------------------------- |
+| Python      | Core programming language |
+| googletrans | Language translation      |
+| gTTS        | Text-to-speech generation |
+| pygame      | Audio playback            |
+| CLI         | User interaction          |
+
+---
+
+# 📂 Project Structure
+
+```
+multilingual-translator-with-speech/
+
+translator.py        # Main translation program  
+requirements.txt     # Project dependencies  
+README.md            # Project documentation  
+.gitignore           # Ignore cache and audio files  
+```
+
+---
+
+# ⚙️ Installation
+
+Clone the repository
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/multilingual-translator-with-speech.git
-cd multilingual-translator-with-speech
-````
+git clone https://github.com/akankshacore/multilingual-translator-with-speech.git
+```
 
-### 2. Install dependencies
+Navigate to the project folder
+
+```bash
+cd multilingual-translator-with-speech
+```
+
+Install dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### 3. Run the script
+---
+
+# ▶️ Run the Program
 
 ```bash
 python translator.py
 ```
 
-### 4. Follow the prompts
+---
 
-* Enter the language you're translating **from** (e.g., `english` or `en`)
-* Enter the phrase to translate
-* Enter the language you're translating **to** (e.g., `french` or `fr`)
+# 💻 Example Usage
 
-## 📦 Requirements
+```
+Enter the language you want to translate from: english
+Enter the word or phrase to translate: how are you
+Enter the language you want to translate to: french
 
-Install all dependencies with:
+Translation: Comment allez-vous
+```
+
+🎧 Audio Output:
+The system will automatically generate and play the translated speech.
+
+---
+
+# 📦 Requirements
+
+Install dependencies manually if needed
 
 ```bash
 pip install googletrans==4.0.0-rc1 gTTS pygame
 ```
 
-Or use the `requirements.txt` file.
+---
 
-## 📁 Files Included
+# 🔮 Future Improvements
 
-* `translator.py` — Main Python script
-* `README.md` — Project documentation
-* `requirements.txt` — Dependency list
-* `.gitignore` — Ignore audio files and `__pycache__`
+• Add graphical interface using **Tkinter / PyQt**
+• Support **real-time speech input**
+• Add **translation history storage**
+• Improve **language detection accuracy**
 
-## 📸 Preview
+---
 
-```bash
-Enter the language you want to translate from: english
-Enter the word or phrase to translate: how are you
-Enter the language you want to translate to: french
-Translation: Comment allez-vous
-```
+# 👩‍💻 Author
 
-*(Audio plays: "Comment allez-vous")*
+**Akanksha**
 
-## 🧠 Future Enhancements
+---
 
-* Add GUI using Tkinter or PyQt
-* Auto-suggest supported languages
-* Store translation history
-
-## 🤝 Contributing
-
-Pull requests are welcome! For major changes, please open an issue first to discuss what you would like to change.
-
-## 📃 License
-
-This project is open source and free to use under the [MIT License](LICENSE).
+⭐ If you found this project useful, consider **starring the repository**.
